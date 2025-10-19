@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+</head>
+
+<body style="background: #f8f9fa">
+
+        <div>
+                <img src="{% static 'img/downlogoreal.png' %}" alt="hjed" class="down-logo">
+                <a href="https://wa.me/qr/PZB3YSVTDQW3J1"><img src="{% static 'img/whatsapp.png' %}" alt="" class="whats-app"></a>
+        </div>
+
+        <!-- nav bar -->
+        <nav class="navbar navbar-expand-lg nav-bar">
+                <div class="container-fluid nav-card">
+                        <a href="#"><img src="{% static 'img/logo.png' %}" alt=""></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                                <a class="nav-link active text-light" aria-current="page"
+                                                        href="index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link active text-light" href="#"
+                                                        onclick="event.preventDefault();scroll1();">Features</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link active text-light" href="../gallery">Gallery</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link active text-light" href="#"
+                                                        onclick="event.preventDefault();scroll2();">Notices</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link active text-light" href="../eBook">E-Book</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link active text-light" href="#"
+                                                        onclick="event.preventDefault();scroll3();">Contacts</a>
+                                        </li>
+                                </ul>
+                        </div>
+                        <form class="d-flex" role="search">
+                                <a class="btn btn-outline-light" href="../loginn" target="_blank">Login</a>
+                                <a class="btn btn-outline-light" href="../signupp" target="_blank">Sign Up</a>
+                        </form>
+                </div>
+        </nav>
+        <img src="{% static 'img/herosection.png' %}" alt="" style="width: 100%;" class="mb-3 mt-5 hero">
+
+        <!-- Slider -->
+        <div id="carouselExampleSlidesOnly" class="carousel slide mb-5" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                        <div class="carousel-item">
+                                <img src="{% static 'img/sch1.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item ">
+                                <img src="{% static 'img/slider3.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item active">
+                                <img src="{% static 'img/slider2.jpg' %}" class="d-block w-100" alt="...">
+                        </div>
+                </div>
+        </div>
+
+        <!-- About Us -->
+
+        <div class="col-sm-12">
+                <h1 class="text-center top text-dark">ABOUT US</h1>
+                <div class="under-line"></div>
+        </div>
+        <div class="container bg-light mb-5 about-us">
+                <div class="row">
+                        <div class="col-sm-6 about-text">
+                                <p class="text-center">Welcome to the official online portal of Abhiraji Vihar Inter
+                                        College, a place where knowledge meets innovation. Established with a vision to
+                                        provide quality education and holistic development, our institution has been
+                                        shaping young minds into future leaders and responsible citizens.
+
+                                        Through this digital platform, we aim to bridge the gap between students,
+                                        faculty, and administration by providing a seamless experience for academics,
+                                        results, admissions, and important updates—all at your fingertips.
+
+                                        At Abhiraji Vihar Inter College, we believe in nurturing talent, promoting
+                                        discipline, and encouraging creativity.We take pride in being a center of
+                                        learning, growth, and innovation, preparing students for a brighter future.
+                                </p>
+                                <div class="under-line"></div>
+                        </div>
+                        <div class="col-sm-6 about-img">
+                                <img src="{% static 'img/about.jpg' %}" alt="" class="img-fluid">
+                        </div>
+                </div>
+        </div>
+        <!-- Cources -->
+
+        <!-- Inter -->
+        <div class="col-sm-12">
+                <h1 class="text-center top text-dark">INTER COURCES</h1>
+                <div class="under-line"></div>
+        </div>
+        <div class="container.fluid inter-cources mb-5">
+                <div class="row g-5 inter-cources">
+                        <div class="card bg-light g-5 card-pulse" style="width: 18rem;">
+                                <img src="{% static 'img/card1.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                        <h5 class="card-title text-center">BIO STREAM</h5>
+                                        <p class="card-text">Includes Reproduction, Genetics, Biotechnology, Human
+                                                Welfare,
+                                                Ecology & Environment.</p>
+                                </div>
+                                <div class="card-body">
+                                        <a href="#" class="card-link">More Details</a>
+                                </div>
+                        </div>
+                        <div class="card bg-light g-5 card-pulse" style="width: 18rem;">
+                                <img src="{% static 'img/card2.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                        <h5 class="card-title text-center">MATH STREAM</h5>
+                                        <p class="card-text"> Covers Relations & Functions, Algebra, Calculus, Vectors,
+                                                Probability,
+                                                and Linear Programming.</p>
+                                </div>
+                                <div class="card-body">
+                                        <a href="#" class="card-link">More Details</a>
+                                </div>
+                        </div>
+                        <div class="card bg-light g-5 card-pulse" style="width: 18rem;">
+                                <img src="{% static 'img/card3.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                        <h5 class="card-title text-center ">ART STREAM</h5>
+                                        <p class="card-text"> Focuses on art-integrated projects that combine academics
+                                                with creativity,
+                                                as per NEP guidelines.</p>
+                                </div>
+                                <div class="card-body">
+                                        <a href="#" class="card-link">More Details</a>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+
+        <!-- High School -->
+
+        <div class="col-sm-12">
+                <h1 class="text-center top text-dark">HIGH SCHOOL COURCES</h1>
+                <div class="under-line"></div>
+        </div>
+        <div class="container.fluid inter-cources mb-5">
+                <div class="row g-5 inter-cources">
+                        <div class="card bg-light g-5 card-pulse" style="width: 18rem;">
+                                <img src="{% static 'img/card4.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                        <h5 class="card-title text-center ">COMPUTER STREAM</h5>
+                                        <p class="card-text"> Covers Networking, HTML & CSS web development, and Cyber
+                                                Ethics.
+                                                Includes 50 marks practical with real-world projects.</p>
+                                </div>
+                                <div class="card-body">
+                                        <a href="#" class="card-link ">More Details</a>
+                                </div>
+                        </div>
+                        <div class="card bg-light g-5 card-pulse" style="width: 18rem;">
+                                <img src="{% static 'img/card5.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                        <h5 class="card-title text-center">SANSKRIT STREAM</h5>
+                                        <p class="card-text"> Focus on Reading, Writing, Grammar, and Literature.
+                                                Scoring subject with structured internal assessments.</p>
+                                </div>
+                                <div class="card-body">
+                                        <a href="#" class="card-link">More Details</a>
+                                </div>
+                        </div>
+                        <div class="card bg-light g-5 card-pulse" style="width: 18rem;">
+                                <img src="{% static 'img/card6.jpg' %}" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                        <h5 class="card-title text-center">ART STREAM</h5>
+                                        <p class="card-text"> Compulsory internal subject with art-integrated projects
+                                                linked to academic concepts as per NEP.
+                                        </p>
+                                </div>
+                                <div class="card-body">
+                                        <a href="#" class="card-link">More Details</a>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <!--Features-->
+        <div class="col-sm-12" id="fea">
+                <h1 class="text-center top text-dark">FEATURES</h1>
+                <div class="under-line"></div>
+        </div>
+        <div class="container features mb-5 ">
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <div class="col">
+                                <div class="card bg-light">
+                                        <img src="{% static 'img/card7.png' %}" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                                <h5 class="card-title text-center fw-bold">Smart Classes</h5>
+                                                <p class="card-text"></p>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="col">
+                                <div class="card bg-light">
+                                        <img src="{% static 'img/card8.jpg' %}" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                                <h5 class="card-title text-center fw-bold">Computer Lab</h5>
+                                                <p class="card-text"></p>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="col">
+                                <div class="card bg-light">
+                                        <img src="{% static 'img/card9.png' %}" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                                <h5 class="card-title text-center fw-bold">Science Lab</h5>
+                                                <p class="card-text"></p>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="col">
+                                <div class="card bg-light">
+                                        <img src="{% static 'img/card10.png' %}" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                                <h5 class="card-title text-center fw-bold">Sports Classes</h5>
+                                                <p class="card-text"></p>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <!-- Notice -->
+
+        <div class="col-sm-12" id="note">
+                <h1 class="text-center top text-dark">NOTICES</h1>
+                <div class="under-line"></div>
+        </div>
+        <div class="container mb-5">
+                <div class="card-group notice">
+                        <div class="card notice-card">
+                                <div class="card-body notice-border">
+                                        <h4 class="card-title text-center">Admission</h4>
+                                        <hr>
+                                        <p class="card-text">Join the journey of excellence at Abhiraji Vihar Inter
+                                                College. Explore courses, check eligibility, and apply with ease—our
+                                                digital admission process is simple, transparent, and student-friendly.
+                                        </p>
+                                </div>
+                        </div>
+                        <div class="card notice-card">
+                                <div class="card-body notice-border">
+                                        <h4 class="card-title text-center">Results</h4>
+                                        <hr>
+                                        <p class="card-text">Check your academic performance with ease. The result
+                                                section of Abhiraji Vihar Inter College provides quick and secure access
+                                                to student results—transparent, accurate, and just a click away.</p>
+                                </div>
+                        </div>
+                        <div class="card notice-card">
+                                <div class="card-body notice-border">
+                                        <h4 class="card-title text-center">Holidays</h4>
+                                        <hr>
+                                        <p class="card-text">Stay updated with the official holiday calendar of Abhiraji
+                                                Vihar Inter College. Plan ahead with ease—view upcoming holidays,
+                                                special occasions, and academic breaks all in one place.</p>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <!-- Contact Us -->
+
+        <div class="col-sm-12 mt-5" id="cont">
+                <h1 class="text-center top text-dark">CONTACT-US</h1>
+                <div class="under-line"></div>
+        </div>
+        <div class="container mb-5">
+                <div class="row g-4 contact-us">
+                        <div class="col-md-6 footer-form g-4">
+                                <h5>Contact</h5>
+                                <p><strong>Address:</strong>37W5+5J4, Manda, Manda Khas, Uttar Pradesh 212104
+                                </p>
+                                <p><strong>Call Us:</strong>09198111833</p>
+                                <p><strong>Email:</strong> abhiraji@gmail.com</p>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.1907258192077!2d82.25651047472373!3d25.095404335817502!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398ff4d86de0fa6b%3A0x611770c012d594c6!2sAbhiraji%20vihar%20Inter%20college%20manda!5e0!3m2!1sen!2sin!4v1753000860381!5m2!1sen!2sin"
+                                        width="100%" height="200" style="border:0;" allowfullscreen></iframe>
+                        </div>
+                        <div class="col-md-6 footer-form g-4">
+                                <h5>Send a Message</h5>
+                                <form action="../contactcode/" method="POST">
+                                    {% csrf_token %}
+                                        <div class="mb-2">
+                                            <input type="text" name="name" class="form-control"
+                                                        placeholder="Your Name"></div>
+                                        <div class="mb-2"><input type="email" name="email" class="form-control"
+                                                        placeholder="Your Email"></div>
+                                        <div class="mb-2"><input type="text" name="subject" class="form-control" placeholder="Subject">
+                                        </div>
+                                        <div class="mb-2"><textarea name="msg" class="form-control" rows="3"
+                                                        placeholder="Message"></textarea></div>
+                                        <button class="btn btn-primary contact-btn">Send Message</button>
+                                </form>
+                        </div>
+                </div>
+        </div>
+
+        <!-- Foooter -->
+
+        <div class="container-fluid " id="foot-main">
+                <div class="row foot">
+                        <div class="col-sm-4 text-center text-light">
+                                <div class="d-flex align-items-center mb-2">
+                                        <a href="#"><img src="img/logofoot.png" alt=""></a>
+                                        <p style="font-size: 23px;" class="mt-3">ABHIRAJI VIHAR INTER COLLEGE</p>
+                                </div>
+                                <p>Welcome to our college website. We are dedicated to providing quality
+                                        education and
+                                        fostering a supportive learning environment.</p>
+                        </div>
+                        <div class="col-sm-4 foot-links text-center text-light align-items-center">
+                                <h2 class="text-center text-light mt-3">Quick Links</h2>
+                                <ul class="list-unstyled">
+                                        <li><a href="#" class="text-light">Home</a></li>
+                                        <li><a href="#" class="text-light">About Us</a></li>
+                                        <li><a href="#" class="text-light" onclick="scroll1()">Features</a></li>
+                                        <li><a href="#" class="text-light">Courses</a></li>
+                                        <li><a href="#" class="text-light">Notices</a></li>
+                                        <li><a href="#" class="text-light">Contact Us</a></li>
+                                </ul>
+                        </div>
+                        <div class="col-sm-4 text-center text-light mt-3">
+                                <h2 class="mb-2">Contact Us</h2>
+                                <p style="margin: 0;">Address: 37W5+5J4, Manda, Manda Khas, <br> Uttar Pradesh 212104
+                                </p>
+                                <p style="margin: 0%;">Phone: 09198111833</p>
+                                <p>Email:abhiraji@gmail.com</p>
+                        </div>
+                </div>
+                <div class="footer-line">
+
+                </div>
+                <div class="row">
+                        <div class="col-sm-12 text-center text-light footer">
+                                <p>© 2025 Abhiraji Vihar Inter College Manda. All rights reserved.</p>
+                        </div>
+                </div>
+        </div>
+
+
+
+        <script>
+                function scroll1() {
+                        document.getElementById("fea").scrollIntoView({
+                                behavior: "smooth"
+                        })
+                }
+
+                function scroll2() {
+                        document.getElementById("note").scrollIntoView({
+                                behavior: "smooth"
+                        })
+                }
+
+                function scroll3() {
+                        document.getElementById("cont").scrollIntoView({
+                                behavior: "smooth"
+                        })
+                }
+        </script>
+</body>
+
+</html>

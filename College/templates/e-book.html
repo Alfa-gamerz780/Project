@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E-Book</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <style>
+                * {
+                        margin: 0%;
+                        padding: 0%;
+                        font-family: sans-serif;
+                        scroll-behavior: smooth;
+                }
+
+                .down-logo {
+                        position: fixed;
+                        bottom: 10px;
+                        left: 10px;
+                        background: transparent;
+                        width: 100px;
+                        z-index: 999;
+                }
+
+                .whats-app {
+                        position: fixed;
+                        bottom: 10px;
+                        right: 10px;
+                        background: transparent;
+                        width: 50px;
+                        z-index: 999;
+                }
+
+
+                nav {
+                        position: sticky;
+                        right: 0px;
+                        top: 0px;
+                        width: 100%;
+                        z-index: 998;
+                        animation: slide linear;
+                        animation-timeline: view();
+                        animation-range: 0% cover 40%;
+                }
+
+                .nav-bar {
+                        position: fixed;
+                        top: 0px;
+                        z-index: 998;
+                        background-color: #1E3A8A;
+                }
+
+                .nav-item {
+                        color: antiquewhite;
+                }
+
+                .nav-card {
+                        position: fixed;
+                        top: 0px;
+                        z-index: 998;
+                        background-color: #1E3A8A;
+                }
+
+                .active {
+                        animation: bounce 2s;
+                        animation-iteration-count: unset;
+
+                }
+
+                .active:hover {
+                        text-decoration: underline;
+                        color: antiquewhite;
+                }
+
+                @keyframes bounce {
+
+                        0%,
+                        20%,
+                        50%,
+                        80%,
+                        100% {
+                                transform: translateY(0);
+                        }
+
+                        40% {
+                                transform: translateY(-15px);
+                        }
+
+                        60% {
+                                transform: translateY(-7px);
+                        }
+                }
+
+                .btn {
+                        margin-left: 20px;
+                        background-color: #1E3A8A;
+                        color: #fff;
+                        border: 1px solid #fff;
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                }
+
+                .btn a {
+                        text-decoration: none;
+                        color: #fff;
+                }
+
+                .top {
+                        color: aliceblue;
+                }
+
+                .heading {
+                        text-align: center;
+                        border: 1px solid #000;
+                        border-radius: 8px;
+                        padding: 15px;
+                        background-color: #fff;
+                }
+
+                h2 {
+                        animation: slide linear;
+                        animation-timeline: view();
+                        animation-range: 0% cover 40%;
+                }
+
+                .pdfs {
+                        gap: 20px;
+                        animation: slide linear;
+                        animation-timeline: view();
+                        animation-range: 0% cover 40%;
+                }
+
+                @keyframes slide {
+                        from {
+                                scale: 0.4;
+                                opacity: 0;
+                        }
+
+                        to {
+                                scale: 1;
+                                opacity: 1;
+                        }
+                }
+
+                .card {
+                        padding: 15px;
+                        border: 1px solid #000;
+                }
+
+                .card:hover {
+                        transition: all 0.3s ease-in-out;
+                        transform: scale(1.05);
+                        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+                }
+
+                .card-title {
+                        text-decoration: underline white;
+                        color: #000;
+                }
+
+                .under-line {
+                        width: 100px;
+                        height: 5px;
+                        background: linear-gradient(to right, #6817cb, #4009e4);
+                        margin: 0 auto;
+                        margin-bottom: 20px;
+                        animation: slide linear;
+                        animation-timeline: view();
+                        animation-range: 0% cover 40%;
+                        animation: fadeIn 3s, change 2s ease-in-out infinite;
+                }
+
+                @keyframes change {
+                        0% {
+                                background: linear-gradient(to right, #6817cb, #4009e4);
+                        }
+
+                        50% {
+                                background: linear-gradient(to right, #4009e4, #6817cb);
+                        }
+
+                        100% {
+                                background: linear-gradient(to right, #6817cb, #4009e4);
+                        }
+                }
+
+                .foot {
+                        padding: 20px;
+                }
+
+                .foot-link ul {
+                        text-decoration: none;
+                }
+
+                .foot-link ul:hover {
+                        text-decoration: underline;
+                        color: #ffffff;
+                }
+
+                .footer.line {
+                        width: 300px;
+                        height: 5px;
+                        background: linear-gradient(to right, #6817cb, #4009e4);
+                        margin: 0 auto;
+                        margin-bottom: 20px;
+                        animation: change 3s ease-in-out infinite;
+                }
+
+                #foot-main {
+                        margin: 0%;
+                        background: #181818;
+                }
+        </style>
+</head>
+
+<body>
+
+        <div>
+                <img src="{% static 'img/downlogoreal.png'%}" alt="" class="down-logo">
+                <a href="https://wa.me/qr/PZB3YSVTDQW3J1"><img src="{% static 'img/whatsapp.png' %}" alt="" class="whats-app"></a>
+        </div>
+
+        <nav class="navbar navbar-expand-lg nav-bar mb-1">
+                <div class="container-fluid nav-card">
+                        <a href="#"><img src="{% static 'img/logo.png'%}" alt=""></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                                <ul class="navbar-nav">
+                                        <li class="nav-item">
+                                                <a class="nav-link active text-light" aria-current="page"
+                                                        href="../index">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link active text-light" href="../index"
+                                                        onclick="event.preventDefault();scroll1();">Features</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link active text-light" href="../gallery">Gallery</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link active text-light" href="../index"
+                                                        onclick="event.preventDefault();scroll2();">Notices</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link active text-light" href="../eBook">E-Book</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link active text-light" href="../index"
+                                                        onclick="event.preventDefault();scroll3();">Contacts</a>
+                                        </li>
+                                </ul>
+                        </div>
+                        <form class="d-flex" role="search">
+                                <a class="btn btn-outline-light" href="../loginn" target="_blank">Login</a>
+                                <a class="btn btn-outline-light" href="../signupp" target="_blank">Sign Up</a>
+                        </form>
+                </div>
+        </nav>
+        <img src="{% static 'img/herosection.png' %}" alt="" style="width: 100%;" class="mb-3 mt-5">
+
+
+        <!-- Class 12 -->
+        <div class="container heading mt-5 mb-5">
+                <div class="mb-5">
+                        <h2>CLASS 12</h2>
+                        <div class="under-line"></div>
+                </div>
+                <div class="container-fluid mb-4 ">
+                        <div class="card-group pdfs">
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/math12.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Mathematics</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/phy12.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Physics</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/che12.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Chemistry</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                        </div>
+                </div>
+                <div class="container-fluid ">
+                        <div class="card-group pdfs">
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/bio12.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Biology</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/eng12.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">English</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/hin12.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Hindi</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <!-- Class 11 -->
+
+        <div class="container heading mt-5 mb-5">
+                <div class="mb-5">
+                        <h2>CLASS 11</h2>
+                        <div class="under-line"></div>
+                </div>
+                <div class="container-fluid mb-4 ">
+                        <div class="card-group pdfs">
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/math11.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Mathematics</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/phy11.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Physics</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/che11.png'%}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Chemistry</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                        </div>
+                </div>
+                <div class="container-fluid ">
+                        <div class="card-group pdfs">
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/bio11.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Biology</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/eng11.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">English</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/hin11.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Hindi</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <!-- Class 10 -->
+
+        <div class="container heading mt-5 mb-5">
+                <div class="mb-5">
+                        <h2>CLASS 10</h2>
+                        <div class="under-line"></div>
+                </div>
+                <div class="container-fluid mb-4 ">
+                        <div class="card-group pdfs">
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/math10.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Mathematics</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/science10.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Science</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/ss10.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Social Science</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                        </div>
+                </div>
+                <div class="container-fluid ">
+                        <div class="card-group pdfs">
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/sansk10.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Sanskrit</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/eng10.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">English</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/hin10.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Hindi</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <!-- Class 09 -->
+
+        <div class="container heading mt-5 mb-5">
+                <div class="mb-5">
+                        <h2>CLASS 11</h2>
+                        <div class="under-line"></div>
+                </div>
+                <div class="container-fluid mb-4 ">
+                        <div class="card-group pdfs">
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/math9.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Mathematics</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/science9.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Science</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/ss9.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Social Science</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                        </div>
+                </div>
+                <div class="container-fluid ">
+                        <div class="card-group pdfs">
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/sansk9.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Sanskrit</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/eng9.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">English</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                                <div class="card">
+                                        <a href=""><img src="{% static 'img/hin9.png' %}" class="card-img-top" alt="..."
+                                                        style="border: 1px solid #000;">
+                                                <div class="card-body">
+                                                        <h5 class="card-title">Hindi</h5>
+
+                                                </div>
+                                        </a>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+
+        <div class="container-fluid " id="foot-main">
+                <div class="row foot">
+                        <div class="col-sm-4 text-center text-light">
+                                <div class="d-flex align-items-center mb-2">
+                                        <a href="#"><img src="{% static 'img/logofoot.png' %}" alt=""></a>
+                                        <p style="font-size: 23px;" class="mt-3">ABHIRAJI VIHAR INTER COLLEGE</p>
+                                </div>
+                                <p>Welcome to our college website. We are dedicated to providing quality
+                                        education and
+                                        fostering a supportive learning environment.</p>
+                        </div>
+                        <div class="col-sm-4 foot-links text-center text-light align-items-center">
+                                <h2 class="text-center text-light mt-3">Quick Links</h2>
+                                <ul class="list-unstyled">
+                                        <li><a href="../index" class="text-light">Home</a></li>
+                                        <li><a href="../index" class="text-light">About Us</a></li>
+                                        <li><a href="../index" class="text-light" onclick="scroll1()">Features</a></li>
+                                        <li><a href="../index" class="text-light">Courses</a></li>
+                                        <li><a href="../index" class="text-light">Notices</a></li>
+                                        <li><a href="../index" class="text-light">Contact Us</a></li>
+                                </ul>
+                        </div>
+                        <div class="col-sm-4 text-center text-light mt-3">
+                                <h2 class="mb-2">Contact Us</h2>
+                                <p style="margin: 0;">Address: 37W5+5J4, Manda, Manda Khas, <br> Uttar Pradesh 212104
+                                </p>
+                                <p style="margin: 0%;">Phone: 09198111833</p>
+                                <p>Email:abhiraji@gmail.com</p>
+                        </div>
+                </div>
+                <div class="footer-line">
+
+                </div>
+                <div class="row">
+                        <div class="col-sm-12 text-center text-light footer">
+                                <p>© 2025 Abhiraji Vihar Inter College Manda. All rights reserved.</p>
+                        </div>
+                </div>
+        </div>
+
+</body>
+
+</html>

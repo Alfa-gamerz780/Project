@@ -1,0 +1,363 @@
+* {
+        margin: 0%;
+        padding: 0%;
+        font-family: sans-serif;
+        scroll-behavior: smooth;
+}
+
+
+.down-logo {
+        position: fixed;
+        bottom: 10px;
+        left: 10px;
+        background: transparent;
+        width: 100px;
+        z-index: 999;
+}
+
+.whats-app {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        background: transparent;
+        width: 50px;
+        z-index: 999;
+}
+
+.whats-app:hover {
+        transform: translateY(-5px);
+}
+
+
+/* navbar */
+
+
+nav {
+        width: 100%;
+        z-index: 999;
+}
+
+.nav-bar {
+        position: fixed;
+        top: 0px;
+
+        z-index: 998;
+}
+
+.nav-item {
+        color: antiquewhite;
+}
+
+.nav-card {
+        position: fixed;
+        top: 0px;
+        z-index: 998;
+        background-color: #1E3A8A;
+}
+
+.active {
+        animation: bounce 2s;
+        animation-iteration-count: unset;
+
+}
+
+.active:hover {
+        color: antiquewhite;
+        text-decoration: underline;
+}
+
+@keyframes bounce {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+                transform: translateY(0);
+        }
+
+        40% {
+                transform: translateY(-15px);
+        }
+
+        60% {
+                transform: translateY(-7px);
+        }
+}
+
+.btn {
+        margin-left: 20px;
+        background-color: #9FB1BC;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+}
+
+.btn a{
+        text-decoration: none;
+        color: #fff;
+}
+
+.top {
+        color: aliceblue;
+}
+
+
+
+/* slider */
+
+
+.slide {
+        transform: translateY(-5px);
+        transition: all 0.3s ease-in-out;
+        animation: slide linear;
+        animation-timeline: view();
+        animation-range: 0% cover 40%;
+}
+
+
+/* About us */
+
+
+.about-us {
+        border: 1px solid #000;
+        border-radius: 8px;
+        animation: slide linear;
+        animation-timeline: view();
+        animation-range: 0% cover 40%;
+}
+
+@keyframes slide {
+        from {
+                scale: 0.4;
+                opacity: 0;
+        }
+
+        to {
+                scale: 1;
+                opacity: 1;
+        }
+}
+
+.about-text {
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+}
+
+.about-img {
+        padding: 10px;
+}
+
+
+/* Cources */
+
+
+.top {
+        animation: fadeIn 3s ease-in-out infinite;
+        animation: slide linear;
+        animation-timeline: view();
+        animation-range: 0% cover 40%;
+}
+
+@keyframes fadeIn {
+        0% {
+                opacity: 0;
+        }
+
+        100% {
+                opacity: 1;
+        }
+}
+
+.under-line {
+        width: 100px;
+        height: 5px;
+        background: linear-gradient(to right, #6817cb, #4009e4);
+        margin: 0 auto;
+        margin-bottom: 20px;
+        animation: slide linear;
+        animation-timeline: view();
+        animation-range: 0% cover 40%;
+        animation: fadeIn 3s, change 2s ease-in-out infinite;
+}
+
+@keyframes change {
+        0% {
+                background: linear-gradient(to right, #6817cb, #4009e4);
+        }
+
+        50% {
+                background: linear-gradient(to right, #4009e4, #6817cb);
+        }
+
+        100% {
+                background: linear-gradient(to right, #6817cb, #4009e4);
+        }
+}
+
+.inter-cources {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 20px;
+        animation: slide linear;
+        animation-timeline: view();
+        animation-range: 0% cover 40%;
+        cursor: pointer;
+}
+
+.card-title {
+        cursor: pointer;
+}
+
+.card-text {
+        color: #000;
+}
+
+.card-link {
+        color: #182ac5;
+        text-decoration: none;
+        text-align: end;
+        align-items: end;
+}
+
+.card-link:hover {
+        text-decoration: underline;
+        color: #182ac5;
+}
+
+.card-pulse {
+        border: 1px solid #000;
+        border-radius: 8px;
+        animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+        0% {
+                transform: scale(1);
+        }
+
+        50% {
+                transform: scale(1.05);
+        }
+
+        100% {
+                transform: scale(1);
+        }
+}
+
+
+/* Features */
+
+
+.features {
+        border-radius: 8px;
+        align-items: center;
+        justify-content: center;
+        animation: slide linear;
+        animation-timeline: view();
+        animation-range: 0% cover 40%;
+}
+
+.features .card {
+        border-radius: 10px;
+        padding: 20px;
+        color: #333;
+        cursor: pointer;
+        text-align: center;
+}
+
+.features .card:hover {
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Notice */
+
+.notice {
+        gap: 20px;
+        cursor: pointer;
+        animation: slide linear;
+        animation-timeline: view();
+        animation-range: 0% cover 40%;
+}
+
+.notice-card {
+        border-radius: 20px;
+}
+
+.notice-card:hover {
+        transition: all 0.3s ease-in-out;
+        transform: translateY(-5px);
+        box-shadow: 0 0 10px #4009e4;
+}
+
+.notice-border {
+        padding: 20px;
+        border: 1px solid;
+}
+
+.notice-border p {
+        color: #333;
+}
+
+
+/* Contact */
+
+
+.contact-us {
+        animation: slide linear;
+        animation-timeline: view();
+        animation-range: 0% cover 40%;
+}
+
+.contact-btn {
+        text-align: center;
+        align-items: center;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+}
+
+.footer-form {
+        background: white;
+        padding: 30px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Footer */
+
+.foot {
+        padding: 20px;
+}
+
+.foot-link ul {
+        text-decoration: none;
+}
+
+.foot-link ul:hover {
+        text-decoration: underline;
+        color: #ffffff;
+}
+
+.footer.line {
+        width: 300px;
+        height: 5px;
+        background: linear-gradient(to right, #6817cb, #4009e4);
+        margin: 0 auto;
+        margin-bottom: 20px;
+        animation: change 3s ease-in-out infinite;
+}
+
+#foot-main {
+        margin: 0%;
+        background: #181818;
+}
