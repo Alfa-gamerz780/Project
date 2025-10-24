@@ -18,6 +18,28 @@
 .whats-app {
         position: fixed;
         bottom: 10px;
+}
+
+/* Vertical Navbar Styles */
+.navbar.flex-column {
+    width: 250px;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.navbar-nav.flex-column {
+    width: 100%;
+}
+
+.navbar-nav.flex-column .nav-item {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.navbar-nav.flex-column .nav-link {
+    padding: 10px 15px;
+    width: 100%;
+    text-align: left;
         right: 10px;
         background: transparent;
         width: 50px;
