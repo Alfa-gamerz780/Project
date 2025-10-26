@@ -51,11 +51,16 @@
             padding: 12px 20px;
             transition: background-color 0.3s;
             margin: 2px 0;
+            color: white;
         }
 
-        .nav-link:hover {
-            text-decoration: underline;
-            font-size: 19px;
+        .nav-link:hover{
+            color: black;
+        }
+
+        .nav-item:hover{
+            background-color: white;
+            color: black;
         }
 
         @media (min-width: 492px) {
@@ -137,16 +142,16 @@
                 <div class="collapse navbar-collapse show-nav" id="navbarNav">
                     <ul class="navbar-nav flex-column w-100">
                         <li class="nav-item">
-                            <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
+                            <a class="nav-link " aria-current="page" href="../admin_home/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Students</a>
+                            <a class="nav-link " href="../student_info/">Students</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Notices</a>
+                            <a class="nav-link " href="../admin_notices">Notices</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="#">Admin</a>
+                            <a class="nav-link " href="#">Admin</a>
                         </li>
                     </ul>
                 </div>

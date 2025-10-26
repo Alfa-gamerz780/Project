@@ -67,12 +67,33 @@ def admin_logincode(request):
         return HttpResponse("<script>alert('password is wrong');window.location.href='../admin_login'</script>")
     else:
         return HttpResponse("<script>alert('Admin Login Successfully');window.location.href='../dashboard'</script>")
-    
+
+
 def admin_dashboard(request):
     return render(request, 'admin_dashboard.html')
 
 def student_info(request):
     return render(request, 'student_info.html')
+
+def admin_home(request):
+    return render(request, 'admin_home.html')
+
+def admin_notices(request):
+    return render(request, 'admin_notices.html')
+
+def student_info(request):
+    students = signtbl.objects.all()
+    return render(request, 'student_info.html', {'students': students})
+
+def admin_notices(request):
+    title = request.POST.get('title')
+    content = request.POST.get('content')
+    Notice.objects.create(title=title, content=content)
+    return HttpResponse("<script>alert('Notice has been posted');window.location.href='../admin_notices'</script>")
+
+def admin_notices(request):
+    notice = Notice.objects.all()
+    return render(request, 'admin_notices.html', {'notice': notice})
 
 from myapp.models import admintbl
 
