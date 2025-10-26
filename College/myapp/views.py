@@ -29,12 +29,13 @@ def contactcode(request):
 
 def signcode(request):
     name = request.POST.get('name')
+    email_login = request.POST.get('email_login')
     dob = request.POST.get('dob')
     roll = request.POST.get('roll')
     password = request.POST.get('pass')
     cpassword = request.POST.get('cpass')
     if password == cpassword:
-        signtbl.objects.create(name=name, dob=dob, roll=roll, password=password)
+        signtbl.objects.create(name=name, email_login=email_login, dob=dob, roll=roll, password=password)
         return HttpResponse("<script>alert('Sign Up successfully');window.location.href='../loginn'</script>")
     else:
         return HttpResponse("<script>alert('password and Confirm password did not match');window.location.href='../signupp'</script>")
@@ -69,6 +70,9 @@ def admin_logincode(request):
     
 def admin_dashboard(request):
     return render(request, 'admin_dashboard.html')
+
+def student_info(request):
+    return render(request, 'student_info.html')
 
 from myapp.models import admintbl
 

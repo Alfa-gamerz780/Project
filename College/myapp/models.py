@@ -12,6 +12,7 @@ class Contact(models.Model):
 
 class signtbl(models.Model):
     name = models.CharField(max_length=100)
+    email_login = models.EmailField()
     dob = models.CharField(max_length=100)
     roll = models.CharField(max_length=100)
     password = models.CharField(max_length=100)

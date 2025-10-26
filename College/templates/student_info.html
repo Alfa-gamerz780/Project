@@ -1,0 +1,30 @@
+{% extends "dashboard.html" %}
+
+{% block body %}
+
+{% csrf_token %}
+<h2 class="text-center">Student Information</h2>
+
+<table class="table table-bordered mt-4">
+        <thead class="table-dark">
+                <tr>
+                        <th scope="col">Roll No</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Date of Birth</th>
+                        <th scope="col">Password</th>
+                </tr>
+        </thead>
+        <tbody class="table-dark">
+                {% for student in students %}
+                <tr>
+                        <td>{{ student.roll }}</td>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.email_login }}</td>
+                        <td>{{ student.dob }}</td>
+                        <td>{{ student.password }}</td>
+                </tr>
+        </tbody>
+        {% endfor %}
+
+        {% endblock %}
