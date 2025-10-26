@@ -18,3 +18,11 @@ class signtbl(models.Model):
 
     def __str__(self):
         return self.name
+    
+class admintbl(models.Model):
+    admin_username = models.CharField(max_length=100)
+    admin_password = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.admin_username
+

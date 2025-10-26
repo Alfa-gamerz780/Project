@@ -52,3 +52,23 @@ def logincode(request):
 
 def dashboard(request):
     return render(request, 'dashboard.html')
+
+def admin_login(request):
+    return render(request, 'admin_login.html')
+
+def admin_logincode(request):
+    admin_username = request.POST.get('admin_username')
+    admin_password = request.POST.get('admin_password')
+    data = admintbl.objects.filter(admin_username=admin_username).first()
+    if not data:
+        return HttpResponse("<script>alert('Username is wrong');window.location.href='../admin_login'</script>")
+    if data.admin_password != admin_password:
+        return HttpResponse("<script>alert('password is wrong');window.location.href='../admin_login'</script>")
+    else:
+        return HttpResponse("<script>alert('Admin Login Successfully');window.location.href='../dashboard'</script>")
+    
+def admin_dashboard(request):
+    return render(request, 'admin_dashboard.html')
+
+from myapp.models import admintbl
+

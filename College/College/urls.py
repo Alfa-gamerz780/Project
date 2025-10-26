@@ -29,4 +29,6 @@ urlpatterns = [
     path('signcode/', views.signcode),
     path('logincode/', views.logincode),
     path('dashboard/', views.dashboard),
+    path('admin_login/', views.admin_login),
+    path('admin_logincode/', views.admin_logincode),
 ]
