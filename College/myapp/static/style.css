@@ -16,6 +16,7 @@
 }
 
 .whats-app {
+        height: 20px;
         position: fixed;
         bottom: 10px;
 }
