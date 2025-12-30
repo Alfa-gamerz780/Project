@@ -16,31 +16,34 @@
 }
 
 .whats-app {
-        height: 20px;
         position: fixed;
         bottom: 10px;
+        right: 10px;
+        background: transparent;
+        width: 50px;
+        z-index: 999;
 }
 
 /* Vertical Navbar Styles */
 .navbar.flex-column {
-    width: 250px;
-    min-height: 100vh;
-    padding: 20px;
+        width: 250px;
+        min-height: 100vh;
+        padding: 20px;
 }
 
 .navbar-nav.flex-column {
-    width: 100%;
+        width: 100%;
 }
 
 .navbar-nav.flex-column .nav-item {
-    width: 100%;
-    margin: 5px 0;
+        width: 100%;
+        margin: 5px 0;
 }
 
 .navbar-nav.flex-column .nav-link {
-    padding: 10px 15px;
-    width: 100%;
-    text-align: left;
+        padding: 10px 15px;
+        width: 100%;
+        text-align: left;
         right: 10px;
         background: transparent;
         width: 50px;
@@ -118,7 +121,7 @@ nav {
         cursor: pointer;
 }
 
-.btn a{
+.btn a {
         text-decoration: none;
         color: #fff;
 }
